@@ -14,6 +14,7 @@ def ex1_1():
 # Write a program that asks the user for their name and then greets them using that name.
 # Use the print and input commands.
 
+
 def ex1_2():
     print("The greeting program v. 1.0")
     name = input("Enter your name: ")
@@ -59,8 +60,12 @@ def ex1_3():
         imag = math.sqrt(-delta) / (2 * a)
         print(f"The complex roots are: {real:.2f} + {imag:.2f}i and {real:.2f} - {imag:.2f}i")
 
-# ex1_4
-# Write a program collecting details of a pizza order. Assume (in your code) some set of sauces, toppings, and their prices. After collecting all data display a description of the pizza and its price. You can assume that the client, though hungry, always gives valid answers.
+# 1.4
+# Write a program collecting details of a pizza order.
+# Assume (in your code) some set of sauces, toppings, and their prices.
+# After collecting all data display a description of the pizza and its price.
+# You can assume that the client, though hungry, always gives valid answers.
+
 
 def ex1_4():
     print("Pizzarino Ltd. The best pizza deliveries in this century and galaxy!")
