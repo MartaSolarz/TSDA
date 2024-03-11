@@ -107,6 +107,13 @@ def reverse2(lst):
 def set_sum(lst1, lst2):
     return list(set(lst1 + lst2))
 
+def set_sumV2(lst1, lst2):
+    new = copy(lst1)
+    for i in lst2:
+        if i not in new:
+            new.append(i)
+    return new
+
 # Exercise 8
 # Write a function sorted_set_sum(lst1, lst2) that returns the set-theoretic sum of arguments.
 # In this exercise, sets are to be represented as lists of their elements in ascending order
@@ -127,6 +134,14 @@ def sorted_set_sum(lst1, lst2):
     elements.sort()
     return elements
 
+
+def sorted_set_sumV2(lst1, lst2):
+    new = set_sumV2(lst1, lst2)
+    for i in range(len(new)):
+        for j in range(i + 1, len(new)):
+            if new[i] > new[j]:
+                new[i], new[j] = new[j], new[i]
+    return new
 
 if __name__ == "__main__":
     print(my_sum([]))
@@ -165,3 +180,9 @@ if __name__ == "__main__":
     print(sorted_set_sum([], [1, 2, 3]))
     print(sorted_set_sum([1, 2, 3], []))
     print(sorted_set_sum([-2, 1, 3], [-3, -2, 0, 1, 34]))
+
+    print(sorted_set_sumV2([], []))
+    print(sorted_set_sumV2([1, 2, 3], [1, 2, 3]))
+    print(sorted_set_sumV2([], [1, 2, 3]))
+    print(sorted_set_sumV2([1, 2, 3], []))
+    print(sorted_set_sumV2([-2, 1, 3], [-3, -2, 0, 1, 34]))
